@@ -94,14 +94,49 @@ input[type="search"] {
   top: 50%;
   transform: translateY(-50%) rotate(-45deg);
 }
-
 .menu__list {
   position: fixed;
   top: 0;
   left: 0;
   width: 70vw;
   height: 100vh;
-  transform: translateX(-100%);
+  padding: 20px;
+  color: #fff;
+  transform: translateX(-105%);
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(3px);
+}
+.menu__item {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.menu__item::before {
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+.menu__link {
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.menu__subMenu {
+  width: 100%;
+  display: none;
+  font-size: 1.6rem;
+}
+.menuAct .menu__subMenu {
+  display: block;
+}
+.menu__subMenu li {
+  margin: 10px 0;
+}
+.menu__subMenu a {
+  display: block;
+  padding: 5px 0;
+}
+.isAct .menu__list {
+  transform: none;
 }
 /* 모바일 메인 콘텐츠 */
 .appMain {
