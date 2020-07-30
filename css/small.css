@@ -94,18 +94,6 @@ input[type="search"] {
   top: 50%;
   transform: translateY(-50%) rotate(-45deg);
 }
-.buttonBurger:hover .positionTop {
-  top: 50%;
-  transform: translateY(-50%) rotate(45deg);
-}
-.buttonBurger:hover .positionMiddle {
-  transform: translateY(-50%) translateX(-105%);
-}
-.buttonBurger:hover .positionBottom {
-  top: 50%;
-  transform: translateY(-50%) rotate(-45deg);
-}
-
 
 .menu__list {
   position: fixed;
