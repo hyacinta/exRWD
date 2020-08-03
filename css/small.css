@@ -51,14 +51,14 @@ input[type="search"] {
 }
 
 /* 모바일 내비게이션 */
-/* 모바일 메뉴 제어버튼 */
+
+/* 모바일 메뉴 제어 버튼 */
 .buttonBurger {
+  width: 35px;
+  height: 35px;
   position: absolute;
   top: 60px;
   right: 20px;
-  width: 35px;
-  height: 35px;
-  background-color: blue;
   overflow: hidden;
 }
 .burgerBar {
@@ -67,21 +67,21 @@ input[type="search"] {
   width: 100%;
   height: 20%;
   background-color: #fff;
-  transition: all 200ms ease;
+  transition: all 200ms ease-in-out;
 }
 .round {
-  border-radius: 10px;
+  border-radius: 20px;
 }
 .positionTop {
   top: 0;
 }
 .positionMiddle {
   top: 50%;
-  transform: translatey(-50%);
+  transform: translateY(-50%);
 }
 .positionBottom {
   top: 100%;
-  transform: translatey(-100%);
+  transform: translateY(-100%);
 }
 .isAct .positionTop {
   top: 50%;
@@ -100,33 +100,27 @@ input[type="search"] {
   left: 0;
   width: 70vw;
   height: 100vh;
-  padding: 20px;
-  color: #fff;
   transform: translateX(-105%);
-  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
+  padding: 20px;
 }
-.menu__item {
+/* .menu__item {
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
-}
-.menu__item::before {
-  margin-bottom: 20px;
-  margin-right: 10px;
-}
+} */
 .menu__link {
-  margin-bottom: 20px;
   font-size: 1.7rem;
   font-weight: 700;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: calc(100% - 1.5em);
 }
 .menu__subMenu {
   width: 100%;
-  display: none;
   font-size: 1.6rem;
-}
-.menuAct .menu__subMenu {
-  display: block;
+  display: none;
 }
 .menu__subMenu li {
   margin: 10px 0;
@@ -135,22 +129,40 @@ input[type="search"] {
   display: block;
   padding: 5px 0;
 }
+.menuAct .menu__subMenu {
+  display: block;
+}
 .isAct .menu__list {
   transform: none;
 }
 /* 모바일 메인 콘텐츠 */
 .appMain {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   padding: 10px 20px;
 }
-.book, .news, .board, .twitter, .favorite {
+.book,
+.news,
+.board,
+.favorite,
+.twitter {
   width: 100%;
-  height: 10vh;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
+/* 모바일 인기 사이트 */
+.favorite__list a:hover::before,
+.favorite__list a:focus::before {
+  left: 10em;
+}
+/* 공통 트위터 */
+.twitter__userProfile {
+  text-align: right;
+}
 /* 모바일 푸터 */
 .appFooter {
+  line-height: 2;
+}
+.address span {
+  display: block;
 }
