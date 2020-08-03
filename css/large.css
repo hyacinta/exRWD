@@ -77,8 +77,8 @@ body {
 /* 데스크탑 메인 콘텐츠 */
 .appMain {
   display: grid;
-  grid-template: auto / repeat(12, 1fr);
-  grid-gap: 20px;
+  grid-template:  auto / repeat(12, 1fr);
+  grid-gap: 20px;  
   padding-top: 20px;
   padding-bottom: 20px;
 }
